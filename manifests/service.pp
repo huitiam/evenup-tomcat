@@ -17,8 +17,8 @@ class tomcat::service (
   $monitoring = '',
 ) {
 
-  $manage_real = str2bool($manage)
-  if $manage_real == true {
+  #$manage_real = str2bool($manage)
+  if $manage == true {
     service { 'tomcat':
       ensure  => running,
       enable  => true,
